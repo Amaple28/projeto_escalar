@@ -86,17 +86,20 @@ function liveChangePlanos(value) {
 }
 
 function formaDePagamento(value) {
-    let bronze = document.getElementById("gridRadios39");
-    let prata = document.getElementById("gridRadios49");
-    let ouro = document.getElementById("gridRadios59");
-    let diamante = document.getElementById("gridRadios69");
+    let bronze = document.getElementById("gridRadios1");
+    let prata = document.getElementById("gridRadios2");
+    let ouro = document.getElementById("gridRadios3");
+    let diamante = document.getElementById("gridRadios4");
 
-    let bronzeLabel = document.getElementById("gridRadios39-label");
-    let prataLabel = document.getElementById("gridRadios49-label");
-    let ouroLabel = document.getElementById("gridRadios59-label");
-    let diamanteLabel = document.getElementById("gridRadios69-label");
+    let bronzeLabel = document.getElementById("gridRadios1-label");
+    let prataLabel = document.getElementById("gridRadios2-label");
+    let ouroLabel = document.getElementById("gridRadios3-label");
+    let diamanteLabel = document.getElementById("gridRadios4-label");
 
-    if ((value = "Anual")) {
+    console.log(bronze);
+    console.log(bronzeLabel);
+
+    if (value == "Anual") {
         bronze.value = 15.9;
         prata.value = 19.6;
         ouro.value = 23.01;
@@ -106,7 +109,7 @@ function formaDePagamento(value) {
         prataLabel.innerHTML = "Plano Prata | R$ 19,6";
         ouroLabel.innerHTML = "Plano Ouro | R$ 23,01";
         diamanteLabel.innerHTML = "Plano Diamante | R$ 26,67";
-    } else {
+    } else if (value == "Mensal") {
         bronze.value = 39;
         prata.value = 49;
         ouro.value = 59;
